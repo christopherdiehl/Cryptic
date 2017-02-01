@@ -1,16 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+'use strict'
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import {
+  ActivityIndicator,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+
 
 export default class LandingPage extends Component {
   constructor(props) {

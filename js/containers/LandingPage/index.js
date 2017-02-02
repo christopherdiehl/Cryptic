@@ -2,19 +2,19 @@
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+
 import {
   ActivityIndicator,
   StyleSheet,
   Text,
-  View
-} from 'react-native';
+  View,
+} from 'react-native'
 
 
 export default class LandingPage extends Component {
   constructor(props) {
     super();
   }
-
   render() {
     if(this.props.isLoading) {
       return (
@@ -24,19 +24,31 @@ export default class LandingPage extends Component {
       );
     } else {
       return (
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(165,203,246,1)",
+          }}>
+          <Text
+            style={{
+              color: 'black',
+              fontSize: 54,
+              fontWeight: "bold",
+              fontFamily: "Trebuchet MS",
+              lineHeight: 60,
+            }}>
+            Cryptic
           </Text>
-          <Text style={styles.instructions}>
-            To get started, edit Hello
-          </Text>
-          <Text style={styles.instructions}>
-            Current state = {this.props.isLoading.toString()}
-          </Text>
-          <Text style={styles.instructions}>
-            Press Cmd+R to reload,{'\n'}
-            Cmd+D or shake for dev menu
+          <Text
+            style={{
+              color: 'black',
+              fontSize: 16,
+              fontWeight: 'normal',
+              fontFamily: "Helvetica",
+            }}>
+            Welcome to the most secure chat application.
           </Text>
         </View>
       );
@@ -56,6 +68,7 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
+    fontFamily: 'Cochin',
     margin: 10,
   },
   instructions: {
